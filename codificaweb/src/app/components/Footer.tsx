@@ -17,6 +17,7 @@ const Footer = () => {
             width={150}
             height={50}
             className="mb-4"
+            unoptimized
           />
           <p className="text-gray-400">
             Transformamos ideias em soluções digitais inovadoras. Sites, sistemas e marketing para seu negócio crescer.

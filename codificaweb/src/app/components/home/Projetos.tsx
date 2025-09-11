@@ -80,6 +80,7 @@ const ProjetosSlideFuturista = () => {
                     alt={projeto.title}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1 justify-center">

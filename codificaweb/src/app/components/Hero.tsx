@@ -63,6 +63,7 @@ const Hero: React.FC<HeroProps> = ({
         fill
         className="object-cover scale-105 transition-transform duration-500 ease-in-out hover:scale-110"
         priority
+        unoptimized
       />
 
       {/* Overlay escuro */}

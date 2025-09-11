@@ -38,7 +38,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Image src="/img/logo.png" alt="Logo" width={150} height={50} />
+            <Image src="/img/logo.png" alt="Logo" width={150} height={50} unoptimized />
           </div>
 
           {/* Menu Desktop */}

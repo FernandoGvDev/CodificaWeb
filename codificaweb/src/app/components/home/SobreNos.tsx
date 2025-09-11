@@ -20,6 +20,7 @@ const SobreNos = () => {
             alt="Codifica Web"
             fill
             className="object-contain"
+            unoptimized
           />
         </motion.div>
 
