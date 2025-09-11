@@ -38,8 +38,10 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <h4 className="font-bold text-lg mb-4">Redes Sociais</h4>
           <div className="flex space-x-4">
-            {[{icon: FaWhatsapp, link: "https://wa.me/5551991488088"},
-              {icon: FaInstagram, link: "https://www.instagram.com/codifica_web/"}].map((social, idx) => (
+            {[
+              { icon: FaWhatsapp, link: "https://wa.me/5551991488088" },
+              { icon: FaInstagram, link: "https://www.instagram.com/codifica_web/" }
+            ].map((social, idx) => (
               <motion.a
                 key={idx}
                 href={social.link}
