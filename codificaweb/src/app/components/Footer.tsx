@@ -1,8 +1,9 @@
 "use client";
 
-import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -26,10 +27,10 @@ const Footer = () => {
         <div className="flex flex-col items-center">
           <h4 className="font-bold text-lg mb-4">Links Rápidos</h4>
           <ul className="space-y-2">
-            <li><a href="/" className="hover:text-blue-500 transition">Início</a></li>
-            <li><a href="/servicos" className="hover:text-blue-500 transition">Serviços</a></li>
-            <li><a href="/#projetos" className="hover:text-blue-500 transition">Projetos</a></li>
-            <li><a href="/sobre" className="hover:text-blue-500 transition">Sobre Nós</a></li>
+            <li><Link href="/" className="hover:text-blue-500 transition">Início</Link></li>
+            <li><Link href="/servicos" className="hover:text-blue-500 transition">Serviços</Link></li>
+            <li><Link href="/#projetos" className="hover:text-blue-500 transition">Projetos</Link></li>
+            <li><Link href="/sobre" className="hover:text-blue-500 transition">Sobre Nós</Link></li>
           </ul>
         </div>
 

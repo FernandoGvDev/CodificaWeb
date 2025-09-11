@@ -6,6 +6,7 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaCheckCircle } from "react-icons/fa";
+import Link from "next/link";
 
 const services = [
   {
@@ -108,12 +109,12 @@ export default function Servicos() {
 
               {/* Botões */}
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <a
+                <Link
                   href={service.page}
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition text-center"
                 >
                   Saiba mais
-                </a>
+                </Link>
                 <a
                   href={`https://wa.me/5551991488088?text=${encodeURIComponent(
                     service.whatsappMsg

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
 const SobreNos = () => {
   return (
     <section className="py-20 bg-white">

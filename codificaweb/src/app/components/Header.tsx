@@ -44,7 +44,7 @@ const Header = () => {
           {/* Menu Desktop */}
           <nav className="hidden md:flex space-x-8 items-center">
             {menuItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`relative px-3 py-2 font-medium transition-transform duration-200 ${
@@ -57,7 +57,7 @@ const Header = () => {
                 {!item.highlight && (
                   <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 )}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -85,7 +85,7 @@ const Header = () => {
             >
               <div className="flex flex-col items-center space-y-6 py-6">
                 {menuItems.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsOpen(false)}
@@ -96,7 +96,7 @@ const Header = () => {
                     } w-3/4 text-center`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
 
                 {/* Ícones de redes sociais */}
