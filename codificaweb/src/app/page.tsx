@@ -7,6 +7,7 @@ import Projetos from "./components/home/Projetos";
 import SobreNos from "./components/home/SobreNos";
 import HeroCTA from "./components/home/HeroCTA";
 import Footer from "./components/Footer";
+import Portfolio from "./components/Portfolio";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
 
       {/* Projetos */}
       <div className="py-24" id="projetos">
-        <Projetos />
+        <Portfolio />
       </div>
 
       {/* Sobre Nós */}

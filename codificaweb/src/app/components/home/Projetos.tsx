@@ -9,7 +9,7 @@ const projetos = [
     title: "Advocacia Silva",
     description: "Site moderno e profissional para escritórios de advocacia, transmitindo credibilidade e confiança aos clientes.",
     imgSrc: "/img/steinntz.jpeg",
-    link: "#",
+    link: "https://steinntz.adv.br/",
   },
   {
     title: "Estúdio de Unhas Glam",
