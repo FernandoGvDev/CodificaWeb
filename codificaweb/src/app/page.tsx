@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Servico from "./components/home/Servico";
 import Beneficios from "./components/home/Beneficios";
-import Projetos from "./components/home/Projetos";
 import SobreNos from "./components/home/SobreNos";
 import HeroCTA from "./components/home/HeroCTA";
 import Footer from "./components/Footer";
