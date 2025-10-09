@@ -1,15 +1,14 @@
 // src/components/Header.tsx
 import { useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { HiMenu, HiX } from "react-icons/hi"; // ✅ ícones modernos
 
-// 🔹 Tipagem do menu
 export interface MenuItem {
   name: string;
   href: string;
   highlight?: boolean;
 }
 
-// 🔹 Exemplo de menuItems
 const menuItems: MenuItem[] = [
   { name: "Início", href: "/", highlight: false },
   { name: "Sites", href: "/sites", highlight: true },
@@ -22,7 +21,6 @@ export default function Header() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // 🔹 Função de rolagem suave para âncoras
   const handleSmoothScroll = (href: string) => {
     const [, hash] = href.split("#");
     if (hash) {
@@ -31,14 +29,13 @@ export default function Header() {
     }
   };
 
-  // 🔹 Renderiza item do menu
   const renderItem = (item: MenuItem, i: number) => {
-    const baseClass = "px-3 py-2 rounded-md font-medium transition-colors text-sm";
+    const baseClass =
+      "px-4 py-3 rounded-lg font-medium text-lg w-full text-center transition-colors";
     const highlightClass = item.highlight
       ? "bg-pink-500 text-white shadow-md"
       : "text-gray-700 hover:text-blue-600";
 
-    // 🔸 Link externo
     if (/^https?:\/\//.test(item.href)) {
       return (
         <a
@@ -54,7 +51,6 @@ export default function Header() {
       );
     }
 
-    // 🔸 Âncora interna
     if (item.href.includes("#")) {
       return (
         <button
@@ -76,7 +72,6 @@ export default function Header() {
       );
     }
 
-    // 🔸 Rota interna
     return (
       <NavLink
         key={i}
@@ -92,7 +87,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b">
       <div className="max-w-6xl mx-auto px-4 md:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link
@@ -111,20 +106,20 @@ export default function Header() {
           {menuItems.map((item, i) => renderItem(item, i))}
         </nav>
 
-        {/* Botão Mobile */}
+        {/* Botão Mobile com ícones modernos */}
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="md:hidden p-2 rounded-md border"
-          aria-label="Abrir menu"
+          className="md:hidden p-2 rounded-md text-blue-700"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
         >
-          {open ? "✖" : "☰"}
+          {open ? <HiX size={28} /> : <HiMenu size={28} />}
         </button>
       </div>
 
       {/* Menu Mobile */}
       {open && (
         <div className="md:hidden bg-white border-t shadow-sm">
-          <div className="flex flex-col px-4 py-4 gap-2">
+          <div className="flex flex-col items-center justify-center px-4 py-6 gap-3">
             {menuItems.map((item, i) => renderItem(item, i))}
           </div>
         </div>
