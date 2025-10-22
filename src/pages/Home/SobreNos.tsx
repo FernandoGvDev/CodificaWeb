@@ -16,7 +16,7 @@ const SobreNos: React.FC = () => {
         {/* Imagem */}
         <div className="w-full md:w-1/2 relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
           <img
-            src="/img/mascote.png"
+            src="/img/perfil.png"
             alt="Mascote da Codifica Web"
             className="w-full h-full object-contain"
             loading="lazy"
