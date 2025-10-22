@@ -1,5 +1,4 @@
-// src/lib/gtag.ts
-export const GA_MEASUREMENT_ID = 'G-WPXNTVTKEY'; // substitua
+export const GA_MEASUREMENT_ID = 'G-WPXNTVTKEY';
 
 declare global {
   interface Window { gtag?: (...args: any[]) => void; }
