@@ -20,9 +20,6 @@ export default function Home() {
         title="Bem-vindo à Codifica Web"
       />
 
-      {/* Serviços */}
-      <Servicos />
-
       {/* Benefícios */}
       <div className="mt-20">
         <BeneficiosFlow />
@@ -32,6 +29,8 @@ export default function Home() {
       <div className="" id="projetos">
         <Portifolio />
       </div>
+      {/* Serviços */}
+      <Servicos />
 
       {/* Sobre Nós */}
       <div className="py-24" id="sobre">
