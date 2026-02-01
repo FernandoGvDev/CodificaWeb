@@ -1,55 +1,62 @@
 // src/components/HeroCTA.tsx
-import { motion } from "framer-motion";
+'use client';
+
+import { motion } from 'framer-motion';
+import { contatos } from '../../data/contatos';
 
 const HeroCTA: React.FC = () => {
-  const whatsappLink = "https://wa.me/51991488088";
+  const whatsappLink = `https://wa.me/55${contatos.whatsapp}?text=Olá! Quero impulsionar meu negócio com a Codifica Web.`;
 
   return (
     <section
-      className="relative py-32 flex flex-col items-center justify-center text-center overflow-hidden gap-6 bg-gradient-to-r from-black via-blue-950 to-black border-2 border-blue-600 rounded-4xl mt-20 mb-20 mx-4 md:mx-8 lg:mx-16"
-      aria-label="Chamada para ação - Aumente suas vendas e destaque sua marca"
+      className="relative py-24 px-6"
+      style={{
+        background: 'linear-gradient(to top, #e5e7eb 50%, #0f172a 50%)', // blue-950 / gray-200
+      }}
+      aria-label="Chamada para ação - Solicitar orçamento de site profissional"
     >
-      {/* Título principal */}
-      <motion.h1
-        className="text-4xl md:text-6xl font-extrabold text-gray-100 mb-4 leading-tight"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Leve seu <span className="text-emerald-500">negócio</span> para outro nível
-      </motion.h1>
+      <div className="max-w-5xl mx-auto text-center bg-white rounded-3xl shadow-xl px-8 md:px-16 py-16">
 
-      {/* Subtítulo persuasivo */}
-      <motion.p
-        className="text-gray-300 md:text-xl mb-12 max-w-2xl"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      >
-        Conquiste mais clientes, aumente suas vendas e fortaleça sua marca online com soluções digitais modernas, rápidas e confiáveis.
-      </motion.p>
+        {/* Título */}
+        <motion.h2
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6"
+        >
+          Leve seu <span className="text-emerald-500">negócio</span> para outro nível
+        </motion.h2>
 
-      {/* Botões CTA */}
-      <div className="flex flex-col md:flex-row gap-6">
-        {/* WhatsApp */}
+        {/* Subtítulo */}
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-gray-700 md:text-xl max-w-2xl mx-auto mb-10"
+        >
+          Sites profissionais, rápidos e pensados para gerar mais contatos,
+          credibilidade e oportunidades para sua empresa.
+        </motion.p>
+
+        {/* CTA */}
         <motion.a
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative inline-block px-12 py-5 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-xl md:text-2xl rounded-full shadow-2xl overflow-hidden transition-transform duration-300"
-          whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(16,185,129,0.6)" }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Fale conosco no WhatsApp e aumente suas vendas"
+          whileHover={{ y: -4 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-10 py-5 text-lg md:text-xl font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-600 transition"
+          aria-label="Fale conosco no WhatsApp"
         >
-          Fale conosco no WhatsApp
-          {/* Glow animado */}
-          <motion.span
-            className="absolute inset-0 rounded-full bg-green-400 opacity-20"
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          />
+          Falar com um especialista
         </motion.a>
 
+        {/* Redução de risco */}
+        <p className="text-sm text-gray-500 mt-6">
+          Atendimento direto pelo WhatsApp • Orçamento sem compromisso
+        </p>
       </div>
     </section>
   );

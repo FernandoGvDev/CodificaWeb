@@ -5,10 +5,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import { pageview } from "./lib/gtag";
 
 import Home from "./pages/Home";
-import Servico from "./pages/ServicosPage";
-import Site from "./pages/Sites";
-import Sistema from "./pages/Sistemas";
-
 function RouteChangeTracker() {
   const location = useLocation();
 
@@ -26,9 +22,6 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Servicos" element={<Servico />} />
-        <Route path="/Sites" element={<Site />} />
-        <Route path="/Sistemas" element={<Sistema />} />
       </Routes>
     </Router>
   );

@@ -1,59 +1,59 @@
 export type Project = {
-  titulo: string;
-  descricao: string;
-  img: string;
-  categoria: "Delivery" | "Restaurante" | "Lojas" | "Petshop" | "Serviços";
-  link?: string; // não é obrigatório
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  url: string;
 };
 
 export const projects: Project[] = [
   {
-    titulo: "Site institucional - Superficie Pura",
-    descricao: "Fornecemos orientação jurídica com profissionalismo e total transparência! Auxiliamos você em demandas: familiares etc...",
-    img: "/img/projetos/superficiepura.jpeg",
-    categoria: "Serviços",
-    link: "https://superficiepura.com.br/",
+    id: 1,
+    name: 'Superfície Pura',
+    description: 'Site moderno marmoraria com foco em portfólio de produtos.',
+    image: '/img/projetos/superficiepura.png',
+    url: 'https://superficiepura.com.br',
   },
   {
-    titulo: "Portifólio + Site - Steinntz Advogados",
-    descricao: "Fornecemos orientação jurídica com profissionalismo e total transparência! Auxiliamos você em demandas: familiares etc...",
-    img: "/img/projetos/steinntz.jpeg",
-    categoria: "Serviços",
-    link: "https://steinntz.adv.br/",
+    id: 2,
+    name: 'Marmoraria Krei',
+    description: 'Site profissional para marmoraria com foco em conversão.',
+    image: '/img/projetos/marmorariakrei.png',
+    url: 'https://marmorariakrei.com.br',
   },
   {
-    titulo: "Onpage - RS Service Electric",
-    descricao: "Empresa de serviços elétricos residenciais e comerciais.",
-    img: "/img/projetos/rsserviceelectric.jpeg",
-    categoria: "Serviços",
-    link: "https://rsserviceelectric.com.br",
+    id: 3,
+    name: 'Steinntz Advogados',
+    description: 'Presença digital moderna para escritório de advocacia com design responsivo.',
+    image: '/img/projetos/steinnz.png',
+    url: 'https://steinntz.adv.br/',
   },
   {
-    titulo: "Pagina de venda - Como Lotar sua Agenda",
-    descricao: "Pagina de vendas para Ebook de Como Lotar sua Agenda de Clientes, para pintores residenciais.",
-    img: "/img/projetos/como-lotar-agenda.jpeg",
-    categoria: "Lojas",
-    link: "https://claitonklein.com.br",
+    id: 4,
+    name: 'Móveis Mello',
+    description: 'Site institucional elegante para empresa de móveis.',
+    image: '/img/projetos/moveismello.png',
+    url: 'https://moveismello.com.br',
   },
   {
-    titulo: "Onpage - Mecânica automotiva",
-    descricao: "Oficina especializada em Funilaria, Pintura, Martelinho de Ouro, Polimento e Cristalização.",
-    img: "/img/projetos/nova-alianca.jpeg",
-    categoria: "Serviços",
-    link: "https://nova-alianca.pages.dev/",
+    id: 5,
+    name: 'Rs Service Eletric',
+    description: 'Landing page focada em serviços de eletricista.',
+    image: '/img/projetos/rsservice.png',
+    url: 'https://rsserviceelectric.com.br/',
   },
   {
-    titulo: "Site institucional - StarMot",
-    descricao: "Soluções ágeis e seguras para locação de empilhadeiras, carga, descarga e remoção.",
-    img: "/img/projetos/starmot.jpeg",
-    categoria: "Serviços",
-    link: "https://starmot.pages.dev/",
+    id: 6,
+    name: 'StarMot',
+    description: 'Site institucional empresa de motor com design moderno.',
+    image: '/img/projetos/starmot.png',
+    url: 'https://starmotmotor.com.br/',
   },
   {
-    titulo: "Cardapio + Site - JL Marmitex",
-    descricao: "Na JL Marmitex você encontra pratos caseiros feitos com carinho, ingredientes selecionados e aquele tempero de casa de vó.",
-    img: "/img/projetos/jlmarmitex.jpeg",
-    categoria: "Delivery",
-    link: "https://jlmarmitex.pages.dev/",
-  },
+    id: 7,
+    name: 'Claiton Klein',
+    description:'Onpage venda de Ebooks com design atrativo e foco em conversão.',
+    image: '/img/projetos/claitonklein.png',
+    url: 'https://claitonklein.com.br/',
+  }
 ];

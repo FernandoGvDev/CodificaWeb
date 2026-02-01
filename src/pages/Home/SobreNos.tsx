@@ -1,53 +1,84 @@
 // src/components/SobreNos.tsx
+'use client';
+
+import { Lightbulb, Award, Headphones } from 'lucide-react';
 
 const SobreNos: React.FC = () => {
   const diferenciais = [
-    { title: "Inovação", description: "Soluções criativas e modernas para destacar sua marca." },
-    { title: "Qualidade", description: "Projetos com excelência técnica e atenção aos detalhes." },
-    { title: "Suporte", description: "Atendimento próximo, rápido e humano sempre que precisar." },
+    {
+      icon: Lightbulb,
+      title: 'Inovação',
+      description: 'Soluções modernas pensadas para destacar sua marca no digital.'
+    },
+    {
+      icon: Award,
+      title: 'Qualidade',
+      description: 'Código limpo, design profissional e atenção aos detalhes.'
+    },
+    {
+      icon: Headphones,
+      title: 'Suporte próximo',
+      description: 'Atendimento humano, rápido e direto com quem desenvolve.'
+    }
   ];
 
   return (
     <section
-      className="py-20 bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900 text-gray-100"
-      aria-label="Sobre a Codifica Web - Quem somos e nossos diferenciais"
+      className="bg-[#0f172a] py-24 px-6"
+      aria-label="Sobre a Codifica Web"
     >
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
         {/* Imagem */}
-        <div className="w-full md:w-1/2 relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-64 md:h-[420px] rounded-3xl overflow-hidden bg-white/5 border border-white/10 shadow-xl">
           <img
             src="/img/perfil.png"
             alt="Mascote da Codifica Web"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-contain p-6"
             loading="lazy"
           />
         </div>
 
         {/* Conteúdo */}
-        <div className="w-full md:w-1/2 flex flex-col gap-6">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-100">
-            Sobre <span className="text-emerald-500">Codifica Web</span>
+        <div className="flex flex-col gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+            Sobre a <span className="text-emerald-400">Codifica Web</span>
           </h2>
 
-          <p className="text-gray-300 md:text-lg">
-            Na <strong>Codifica Web</strong>, transformamos ideias em soluções digitais que geram resultados reais. Criamos sites modernos, sistemas inteligentes e experiências online que conquistam clientes.
+          <p className="text-white/70 md:text-lg max-w-xl">
+            Desenvolvemos sites e soluções digitais focadas em gerar resultados reais,
+            não apenas presença online.
           </p>
 
-          <p className="text-gray-300 md:text-lg">
-            Nosso objetivo é impulsionar negócios, aumentar vendas e fortalecer sua marca. Cada projeto é único, pensado para surpreender e encantar o usuário.
+          <p className="text-white/70 md:text-lg max-w-xl">
+            Cada projeto é pensado estrategicamente para atrair clientes,
+            fortalecer sua marca e facilitar o contato.
           </p>
 
           {/* Diferenciais */}
-          <div className="flex flex-col sm:flex-row gap-6 mt-8">
-            {diferenciais.map((item, idx) => (
-              <div
-                key={idx}
-                className="flex-1 bg-gradient-to-r from-emerald-500 to-green-600 p-6 rounded-2xl shadow-lg text-center"
-              >
-                <h4 className="font-bold text-xl text-white mb-2">{item.title}</h4>
-                <p className="text-gray-100 text-sm">{item.description}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6">
+            {diferenciais.map((item, idx) => {
+              const Icon = item.icon;
+
+              return (
+                <div
+                  key={idx}
+                  className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:bg-white/10 transition"
+                >
+                  <div className="flex justify-center mb-4 text-emerald-400">
+                    <Icon className="w-7 h-7" />
+                  </div>
+
+                  <h4 className="font-semibold text-lg text-white mb-2">
+                    {item.title}
+                  </h4>
+
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
