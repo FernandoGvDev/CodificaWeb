@@ -2,31 +2,48 @@
 <html lang="pt-br">
   <head>
     <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VRPBRQYNSQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  // Google Analytics 4
   gtag('config', 'G-VRPBRQYNSQ');
+
+  // Google Ads
+  gtag('config', 'AW-17637361779');
 </script>
-<!-- Event snippet for Clique de saída conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+document.addEventListener("click", function (e) {
+    const el = e.target.closest("a, button");
+
+    if (!el) return;
+
+    let url = "";
+
+    if (el.tagName === "A") {
+        url = el.href;
+    } else {
+        const link = el.querySelector("a");
+        if (link) url = link.href;
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17637361779/1v5GCMim1dccEPOQk9pB',
-      'value': 1.0,
-      'currency': 'BRL',
-      'event_callback': callback
-  });
-  return false;
-}
+
+    if (
+        url.includes("wa.me") ||
+        url.includes("api.whatsapp.com") ||
+        url.includes("web.whatsapp.com") ||
+        url.includes("whatsapp://")
+    ) {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-17637361779/1v5GCMim1dccEPOQk9pB',
+            'value': 1.0,
+            'currency': 'BRL'
+        });
+    }
+});
 </script>
 
 
